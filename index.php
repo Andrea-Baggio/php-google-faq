@@ -10,31 +10,33 @@
 <body>
     <?php 
     $arrFaq = [
-        $firstPart = [
-            'question' => 'Come stai?',
+       [
+        'question' => 'Come state implementando la recente decisione della Corte di giustizia dell\'Unione europea (CGUE) relativa al diritto all\'oblio?',
+        'answer' => [
+            'La recente decisione della Corte di giustizia dell\'Unione europea ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.',
+            'Da quando questa decisione è stata pubblicata il 13 maggio 2014, abbiamo lavorato incessantemente per uniformarci a essa. Si tratta di una procedura complessa perché dobbiamo valutare ogni singola richiesta e effettuare un bilanciamento tra il diritto dell\'individuo a controllare i suoi dati personali ed il diritto di tutti di conoscere e distribuire le informazioni.',
         ],
-
-        $answer1 = [
-            'paragraph1' => 'Tutto bene, grazie.',
-            'paragraph2' => 'Te come stai?',
+       ],
+       [
+        'question' => 'Come fa Google a proteggere la mia privacy e a tenere le mie informazioni al sicuro?',
+        'answer' => [
+            'Buonasera',
+            'Buongiorno',
         ],
-
-        $secondPart = [
-            'question' => 'Nevica?',
-        ],
-    
-        $answer2 = [
-            'paragraph1' => 'No, piove.',
-        ],
+       ],
+       [
+        'question' => 'Perché il mio account è associato a un paese?',
+        'answer' => [],
+       ],
     ];
     ?>
 
     <div class="container">
     <?php
-        foreach ($firstPart as $value) {
-                echo " $value" . '<br>';     
-            foreach ($answer1 as $value) {
-                echo " $value" . '<br>';                
+        foreach ($arrFaq as $value) {
+            echo "<h2>" . $value['question'] . "</h2>";
+            foreach ($value['answer'] as $val) {
+            // echo "<p>" . $val['answer'] . "</p>";
             }
         }
     ?>
